@@ -1,0 +1,172 @@
+fileVersion: 1
+id: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+name: wrk_supplier
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Suppliers joined with nation and region
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-aa2439d6ca04
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: Supplier ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b54939d-6a55-427e-a23d-592d7189e233
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-aed0e3329f5f
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Supplier Name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: be20ffcf-4a6f-442b-a665-b692ac7b5f7d
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-b01d67b6258f
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Supplier Address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa682806-e378-41c0-b39d-ed7ed0d3f5b9
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-bb09e0ab1102
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Supplier Phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: abe94350-efbc-414d-aa8e-f1c2a42a1835
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-bd29e470362f
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: Supplier Account Balance
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 39441a20-f510-4b17-adba-c7b5558db427
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-c5074f9385a0
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Supplier Nation
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b41c23cb-7ddd-46de-b2bd-c9934aca89dc
+                stepCounter: 66ca476f-4d8d-4abb-aebf-8d8f51b49378
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-cf7e367bd887
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Supplier Region
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e6c6b1c-9f6f-4702-98b7-70d71cd1c4c5
+                stepCounter: 9500df4d-b9d8-49f6-a403-646920570322
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-d445-7749-849c-c32126eb011b
+          stepCounter: 0acfe673-872d-4f7c-b07f-e8e96a9c1c28
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Supplier Comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d3f4eec7-bf0d-40f5-9aec-c9cdc0232967
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          nation: 66ca476f-4d8d-4abb-aebf-8d8f51b49378
+          region: 9500df4d-b9d8-49f6-a403-646920570322
+          supplier: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: nation
+          - locationName: BRONZE
+            nodeName: region
+          - locationName: BRONZE
+            nodeName: supplier
+        join:
+          joinCondition: |-
+            FROM {{ ref('BRONZE', 'supplier') }} supplier
+            LEFT JOIN {{ ref('BRONZE', 'nation') }} nation
+              ON supplier.s_nationkey = nation.n_nationkey
+            LEFT JOIN {{ ref('BRONZE', 'region') }} region
+              ON nation.n_regionkey = region.r_regionkey
+        name: wrk_supplier
+        noLinkRefs: []
+  name: wrk_supplier
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

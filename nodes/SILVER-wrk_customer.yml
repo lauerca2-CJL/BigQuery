@@ -1,0 +1,186 @@
+fileVersion: 1
+id: 14b04536-5208-457a-8cc8-0ee968858c12
+name: wrk_customer
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71607d71-3fad-4241-92d7-d3d8c0bd819e
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: INT64
+        description: ""
+        name: Customer ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2e564bc-dd0b-4303-9818-7692ccb3060f
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3bd1c5c-6ab8-4fbf-ab43-9cd2863a463f
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80a73d94-3d54-4f3a-8b93-a6d61bf1bbee
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 408cb156-9fc4-43f6-9ed1-579211ca038d
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Address
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3766360c-8f6f-499c-90f1-08c290fed59d
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ce3c929d-8e10-424e-87bf-eca9e1ba1d19
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: FLOAT64
+        description: ""
+        name: Account Balance
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e64c312-c209-4545-83be-f02e83384f5f
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9890068e-abbf-4c0a-928e-dcac4d3f1aac
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f98c2542-c620-4ed2-b09e-a61424f1e191
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: CONCAT('+', REPLACE(`customer`.`c_phone`, '-', ''))
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c98cebff-78a1-48c8-9890-d83e1d4d9259
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Region
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e6c6b1c-9f6f-4702-98b7-70d71cd1c4c5
+                stepCounter: 9500df4d-b9d8-49f6-a403-646920570322
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cca06c8a-90da-45c9-9a36-e932e1c5940c
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Nation
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b41c23cb-7ddd-46de-b2bd-c9934aca89dc
+                stepCounter: 66ca476f-4d8d-4abb-aebf-8d8f51b49378
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f12cd936-4e68-4e1a-8cb9-4918eed39d43
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Market Segment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae576e64-59cc-413b-a1a7-a78f0b6a0649
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92cfbb43-9600-48c4-b7cf-fef06e042b41
+          stepCounter: 14b04536-5208-457a-8cc8-0ee968858c12
+        config: {}
+        dataType: STRING
+        description: ""
+        name: Customer Comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 928653cd-9611-490b-a10a-75ffe4ede1a2
+                stepCounter: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          customer: e90b0c2e-93a0-4b27-ac4e-248dfdc39d14
+          nation: 66ca476f-4d8d-4abb-aebf-8d8f51b49378
+          region: 9500df4d-b9d8-49f6-a403-646920570322
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: customer
+          - locationName: BRONZE
+            nodeName: nation
+          - locationName: BRONZE
+            nodeName: region
+        join:
+          joinCondition: |-
+            FROM {{ ref('BRONZE', 'nation') }} `nation`
+            INNER JOIN {{ ref('BRONZE', 'customer') }} `customer`
+            ON `nation`.`n_nation_id` = `customer`.`c_nation_id`
+            INNER JOIN {{ ref('BRONZE', 'region') }} `region`
+            ON `nation`.`n_region_id` = `region`.`r_region_id`
+        name: wrk_customer
+        noLinkRefs: []
+  name: wrk_customer
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

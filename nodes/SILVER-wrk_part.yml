@@ -1,0 +1,194 @@
+fileVersion: 1
+id: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+name: wrk_part
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Parts joined with suppliers
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-414239750cba
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: Part ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6d3856d1-b59b-4581-84c8-15479bbb4e20
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-4524e22bbc83
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Part Name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d9182559-e3a1-48e9-879f-669fdb0e37d1
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-4a17b7ef2624
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Part Manufacturer
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: edccedfa-7015-410d-9450-f1a7d673d741
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-4c2c8254371a
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Part Brand
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 208c3c16-7259-40e6-a234-b1ffe54c2cb7
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-5353619c438f
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Part Type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a58a171-505d-45cb-9035-30dd20ea6965
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-571b6b3c309d
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: Part Size
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1a11bb9-d4d4-4389-81d8-dd04974c5235
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-58e8d7a05dea
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Part Container
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a5c6d3ab-9808-4024-89ac-6bb4bbfca679
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-5e0a30a1c717
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: Part Retail Price
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1550ee34-dec0-4cd4-b1d3-e8cf56deda87
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ce7f3-c57b-76a1-9fb3-611fc076bbeb
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: Part Comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2306cb4-6d4d-44c9-aa29-8edfd29bf423
+                stepCounter: e04f1d30-b489-40b0-862a-6e7a24d1c005
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6903e99d-f0b3-4413-8976-cd9ce3252ddc
+          stepCounter: 377fe27e-c38b-49e6-a40f-302ccbe5e104
+        config: {}
+        dataType: INT64
+        description: ""
+        name: Supplier ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b54939d-6a55-427e-a23d-592d7189e233
+                stepCounter: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          part: e04f1d30-b489-40b0-862a-6e7a24d1c005
+          supplier: 00892e32-1ee3-4184-bc18-b30a95ab78b6
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: part
+          - locationName: BRONZE
+            nodeName: supplier
+        join:
+          joinCondition: |-
+            FROM {{ ref('BRONZE', 'part') }} part
+            CROSS JOIN {{ ref('BRONZE', 'supplier') }} supplier
+        name: wrk_part
+        noLinkRefs: []
+  name: wrk_part
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
